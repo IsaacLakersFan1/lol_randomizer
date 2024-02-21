@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random LoL Champion</title>
+<link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+<h1 class="title">Random League Champion Generator</h1>
+<p class="subtitle">by Isaac Salazar 1</p>
+<select id="laneSelect">
+    <option value="All">All Lanes</option>
+    <option value="Top">Top</option>
+    <option value="Mid">Mid</option>
+    <option value="Adc">ADC</option>
+    <option value="Jungle">Jungle</option>
+    <option value="Support">Support</option>
+    <option value="Test">Test</option>
+</select>
+<button id="randomChampionButton">Get Random Champion</button>
+<div id="championContainer">
+    <h2 id="championName"></h2>
+    <img id="championImage" src="" alt="" style="max-width: 200px;">
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
