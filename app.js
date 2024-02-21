@@ -53,7 +53,7 @@ const laneChampionMapping = {
         "Vayne",
         "Vladimir",
         "Volibear",
-        "MonkeyKing", // Updated from "Wukong"
+        "MonkeyKing", 
         "Yasuo",
         "Yorick",
         "Zac",
@@ -66,11 +66,11 @@ const laneChampionMapping = {
         "Akshan",
         "Anivia",
         "Annie",
-        "AurelionSol", // Updated from "Aurelion Sol"
+        "AurelionSol", 
         "Azir",
         "Camille",
         "Cassiopeia",
-        "Chogath", // Updated from "Cho'Gath"
+        "Chogath",
         "Corki",
         "Diana",
         "Ekko",
@@ -83,7 +83,7 @@ const laneChampionMapping = {
         "Jayce",
         "Kassadin",
         "Katarina",
-        "Leblanc", // Updated from "LeBlanc"
+        "Leblanc", 
         "Lillia",
         "Lissandra",
         "Lucian",
@@ -104,9 +104,9 @@ const laneChampionMapping = {
         "Sylas",
         "Syndra",
         "Talon",
-        "TwistedFate", // Updated from "Twisted Fate"
+        "TwistedFate",
         "Veigar",
-        "Velkoz", // Updated from "Vel'Koz"
+        "Velkoz", 
         "Viktor",
         "Vladimir",
         "Xerath",
@@ -117,7 +117,9 @@ const laneChampionMapping = {
         "Zoe",
         'Smolder',
         'Hwei',
-        'Naafiri'
+        'Naafiri',
+        'Yone',
+        'Vex'
     ],
     'Adc': [
         "Aphelios",
@@ -132,9 +134,9 @@ const laneChampionMapping = {
         "Kaisa",
         "Kalista",
         "Kindred",
-        "KogMaw", // Updated from "Kog'Maw"
+        "KogMaw", 
         "Lucian",
-        "MissFortune", // Updated from "Miss Fortune"
+        "MissFortune",
         "Samira",
         "Senna",
         "Quinn",
@@ -145,7 +147,8 @@ const laneChampionMapping = {
         "Vayne",
         "Xayah",
         'Smolder',
-        'Nilah'
+        'Nilah',
+        'Zeri'
     ],
     'Jungle': [
         "Amumu",
@@ -159,23 +162,23 @@ const laneChampionMapping = {
         "Graves",
         "Hecarim",
         "Ivern",
-        "JarvanIV", // Updated to "JarvanIV"
+        "JarvanIV",
         "Jax",
         "Karthus",
         "Kayn",
-        "Khazix", // Updated to "Khazix"
+        "Khazix",
         "Kindred",
         "Kled",
-        "LeeSin", // Updated to "LeeSin"
+        "LeeSin", 
         "Lillia",
-        "MasterYi", // Updated to "MasterYi"
+        "MasterYi", 
         "Nidalee",
         "Nocturne",
         "Nunu",
         "Olaf",
         "Poppy",
         "Rammus",
-        "RekSai", // Updated to "RekSai"
+        "RekSai", 
         "Rengar",
         "Sejuani",
         "Sett",
@@ -190,8 +193,8 @@ const laneChampionMapping = {
         "Viego",
         "Volibear",
         "Warwick",
-        "MonkeyKing", // Added "MonkeyKing" for Wukong
-        "XinZhao", // Updated to "XinZhao"
+        "MonkeyKing", 
+        "XinZhao", 
         "Zac",
         'Briar',
         'Naafiri',
@@ -226,10 +229,10 @@ const laneChampionMapping = {
         "Sona",
         "Soraka",
         "Swain",
-        "TahmKench", // Updated to "TahmKench"
+        "TahmKench", 
         "Taric",
         "Thresh",
-        "Velkoz", // Updated to "Velkoz"
+        "Velkoz", 
         "Xerath",
         "Yuumi",
         "Zac",
@@ -237,7 +240,8 @@ const laneChampionMapping = {
         "Zyra",
         'Hwei',
         'Seraphine',
-        'Milio'
+        'Milio',
+        'Rell'
     ],
     'Test': [
         "KogMaw"
