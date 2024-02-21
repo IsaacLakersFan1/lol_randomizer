@@ -7,7 +7,7 @@ const laneChampionMapping = {
         "Akali",
         "Camille",
         "Cassiopeia",
-        "Cho'Gath",
+        "Chogath",
         "Darius",
         'DrMundo',
         "Fiora",
@@ -53,11 +53,12 @@ const laneChampionMapping = {
         "Vayne",
         "Vladimir",
         "Volibear",
-        "Wukong",
+        "MonkeyKing", // Updated from "Wukong"
         "Yasuo",
         "Yorick",
-        "Zac"
-    ], 
+        "Zac",
+        'KSante'
+    ],
     'Mid': [
         "Aatrox",
         'Ahri',
@@ -65,11 +66,11 @@ const laneChampionMapping = {
         "Akshan",
         "Anivia",
         "Annie",
-        "Aurelion Sol",
+        "AurelionSol", // Updated from "Aurelion Sol"
         "Azir",
         "Camille",
         "Cassiopeia",
-        "Cho'Gath",
+        "Chogath", // Updated from "Cho'Gath"
         "Corki",
         "Diana",
         "Ekko",
@@ -82,7 +83,7 @@ const laneChampionMapping = {
         "Jayce",
         "Kassadin",
         "Katarina",
-        "LeBlanc",
+        "Leblanc", // Updated from "LeBlanc"
         "Lillia",
         "Lissandra",
         "Lucian",
@@ -103,9 +104,9 @@ const laneChampionMapping = {
         "Sylas",
         "Syndra",
         "Talon",
-        "Twisted Fate",
+        "TwistedFate", // Updated from "Twisted Fate"
         "Veigar",
-        "Vel'Koz",
+        "Velkoz", // Updated from "Vel'Koz"
         "Viktor",
         "Vladimir",
         "Xerath",
@@ -113,8 +114,11 @@ const laneChampionMapping = {
         "Zed",
         "Ziggs",
         "Zilean",
-        "Zoe"
-    ], 
+        "Zoe",
+        'Smolder',
+        'Hwei',
+        'Naafiri'
+    ],
     'Adc': [
         "Aphelios",
         "Ashe",
@@ -125,12 +129,12 @@ const laneChampionMapping = {
         "Graves",
         "Jhin",
         "Jinx",
-        "Kai'Sa",
+        "Kaisa",
         "Kalista",
         "Kindred",
-        "Kog'Maw",
+        "KogMaw", // Updated from "Kog'Maw"
         "Lucian",
-        "Miss Fortune",
+        "MissFortune", // Updated from "Miss Fortune"
         "Samira",
         "Senna",
         "Quinn",
@@ -139,12 +143,14 @@ const laneChampionMapping = {
         "Twitch",
         "Varus",
         "Vayne",
-        "Xayah"
-    ], 
+        "Xayah",
+        'Smolder',
+        'Nilah'
+    ],
     'Jungle': [
         "Amumu",
         "Diana",
-        'DrMundo',
+        "DrMundo",
         "Ekko",
         "Elise",
         "Evelynn",
@@ -153,23 +159,23 @@ const laneChampionMapping = {
         "Graves",
         "Hecarim",
         "Ivern",
-        "Jarvan IV",
+        "JarvanIV", // Updated to "JarvanIV"
         "Jax",
         "Karthus",
         "Kayn",
-        "Kha'Zix",
+        "Khazix", // Updated to "Khazix"
         "Kindred",
         "Kled",
-        "Lee Sin",
+        "LeeSin", // Updated to "LeeSin"
         "Lillia",
-        "Master Yi",
+        "MasterYi", // Updated to "MasterYi"
         "Nidalee",
         "Nocturne",
         "Nunu",
         "Olaf",
         "Poppy",
         "Rammus",
-        "Rek'Sai",
+        "RekSai", // Updated to "RekSai"
         "Rengar",
         "Sejuani",
         "Sett",
@@ -184,9 +190,12 @@ const laneChampionMapping = {
         "Viego",
         "Volibear",
         "Warwick",
-        "Wukong",
-        "Xin Zhao",
-        "Zac"
+        "MonkeyKing", // Added "MonkeyKing" for Wukong
+        "XinZhao", // Updated to "XinZhao"
+        "Zac",
+        'Briar',
+        'Naafiri',
+        'Belveth'
     ], 
     'Support': [
         "Alistar",
@@ -217,22 +226,21 @@ const laneChampionMapping = {
         "Sona",
         "Soraka",
         "Swain",
-        "Tahm Kench",
+        "TahmKench", // Updated to "TahmKench"
         "Taric",
         "Thresh",
-        "Vel'Koz",
+        "Velkoz", // Updated to "Velkoz"
         "Xerath",
         "Yuumi",
         "Zac",
         "Zilean",
-        "Zyra"
+        "Zyra",
+        'Hwei',
+        'Seraphine',
+        'Milio'
     ],
     'Test': [
-        'Renata',
-        "Zyra",
-        'Nunu',
-        'DrMundo',
-        'Ahri'
+        "KogMaw"
     ]
 };
 
