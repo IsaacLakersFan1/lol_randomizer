@@ -249,7 +249,7 @@ const laneChampionMapping = {
 };
 
 async function getRandomChampion() {
-    const apiKey = 'RGAPI-47a944c2-5eb9-4130-b8d6-14b9f51be46f';
+
     const selectedLane = document.getElementById('laneSelect').value;
     const versionResponse = await fetch('https://ddragon.leagueoflegends.com/api/versions.json');
     const versions = await versionResponse.json();
