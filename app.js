@@ -249,7 +249,6 @@ const laneChampionMapping = {
 };
 
 async function getRandomChampion() {
-
     const selectedLane = document.getElementById('laneSelect').value;
     const versionResponse = await fetch('https://ddragon.leagueoflegends.com/api/versions.json');
     const versions = await versionResponse.json();
@@ -272,7 +271,16 @@ async function getRandomChampion() {
     const randomChampion = champions[Math.floor(Math.random() * champions.length)]; // Pick a random champion
 
     document.getElementById('championName').textContent = randomChampion.name; // Display the champion's name
-    document.getElementById('championImage').src = `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${randomChampion.id}_0.jpg`; // Display the champion's image
+    document.getElementById('championImage').src = `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${randomChampion.id}_0.jpg`; // Display the champion's default loading screen image
+    
+    // Set full-screen background image with opacity
+    document.body.style.backgroundImage = `url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${randomChampion.id}_0.jpg')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.5)"; // This will act as an overlay color with opacity
+    document.body.style.backgroundBlendMode = "darken"; // Blends the background color with the image
+
     document.getElementById('championContainer').style.display = 'block'; // Show the container
 }
 
