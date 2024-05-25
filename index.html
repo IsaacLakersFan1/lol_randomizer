@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Random LoL Champion</title>
-<link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random LoL Champion</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-<h1 class="title">Random League Champion Generator</h1>
-<p class="subtitle">by Isaac Salazar 1</p>
-<select id="laneSelect">
-    <option value="All">All Lanes</option>
-    <option value="Top">Top</option>
-    <option value="Mid">Mid</option>
-    <option value="Adc">ADC</option>
-    <option value="Jungle">Jungle</option>
-    <option value="Support">Support</option>
-    <option value="Test">Test</option>
-</select>
-<button id="randomChampionButton">Get Random Champion</button>
-<div id="championContainer">
-    <h2 id="championName"></h2>
-    <img id="championImage" src="" alt="" style="max-width: 200px;">
-
-</div>
-
-<script src="app.js"></script>
+    <h1 class="title">Random League Champion Generator</h1>
+    <p class="subtitle">by Isaac Salazar 1</p>
+    <div id="laneSelection">
+        <label><input type="checkbox" value="Top"> Top</label>
+        <label><input type="checkbox" value="Mid"> Mid</label>
+        <label><input type="checkbox" value="Adc"> ADC</label>
+        <label><input type="checkbox" value="Jungle"> Jungle</label>
+        <label><input type="checkbox" value="Support"> Support</label>
+    </div>
+    <button id="randomChampionButton">Get Random Champions</button>
+    <div id="championContainer1" class="championContainer">
+        <img id="championImage1" src="" alt="Champion Image" class="championImage">
+        <h2 id="championName1"></h2>
+        <p id="championLane1"></p>
+    </div>
+    <div id="championContainer2" class="championContainer">
+        <img id="championImage2" src="" alt="Champion Image" class="championImage">
+        <h2 id="championName2"></h2>
+        <p id="championLane2"></p>
+    </div>
+    <div id="championContainer3" class="championContainer">
+        <img id="championImage3" src="" alt="Champion Image" class="championImage">
+        <h2 id="championName3"></h2>
+        <p id="championLane3"></p>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>

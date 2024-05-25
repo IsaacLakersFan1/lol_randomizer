@@ -1,9 +1,18 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a; /* Dark background for contrast */
-    color: white; /* White text color */
-    text-align: center; /* Center align everything */
+    background-color: #2c2c2c; /* Default grey background for initial state */
+    background: url('path/to/resized_new_image.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
     padding: 20px;
+    transition: background 0.5s ease; /* Smooth transition for background change */
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #2c2c2c; /* Grey background for dark mode */
+    }
 }
 
 h1, h2 {
@@ -11,7 +20,7 @@ h1, h2 {
 }
 
 #randomChampionButton {
-    background-color: #007bff; /* Bootstrap primary button color */
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -23,25 +32,32 @@ h1, h2 {
 }
 
 #randomChampionButton:hover {
-    background-color: #0056b3; /* Darken button on hover */
+    background-color: #0056b3;
 }
 
-#championContainer {
-    display: none; /* Initially hide the container */
+.championContainer {
+    display: none;
     margin-top: 20px;
+    position: relative;
 }
 
-#championName {
-    color: white; /* Title color */
-    margin-bottom: 10px;
+#championName1, #championName2, #championName3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    display: inline-block;
 }
 
-#championImage {
-    border-radius: 10px; /* Optional: round corners for the image */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Optional: add shadow for depth */
+.championImage {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    max-width: 200px;
 }
 
-/* Add custom styles for the title and subtitle */
 .title {
     font-size: 80px;
     margin-bottom: 0;
@@ -49,44 +65,34 @@ h1, h2 {
 
 .subtitle {
     font-size: 30px;
-    color: #007bff; /* Same blue color as the button */
-    margin-top: 10;
+    color: #007bff;
+    margin-top: 10px;
     font-weight: bold;
 }
 
+#laneSelection {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
-#laneSelect {
-    display: block;
-    width: 100%; /* Adjust the width as needed */
-    max-width: 300px; /* Set a max-width for larger screens */
+#laneSelection label {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#laneSelection input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#championLane1, #championLane2, #championLane3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0;
     padding: 10px;
-    margin: 20px auto; /* Center the dropdown */
-    font-size: 16px; /* Adjust the font size as needed */
-    border: 1px solid #ccc; /* Light grey border */
-    border-radius: 5px; /* Rounded corners */
-    -webkit-appearance: none; /* Removes default styling for Safari & Chrome */
-    -moz-appearance: none; /* Removes default styling for Firefox */
-    appearance: none; /* Removes default styling */
-    background-color: #f8f8f8; /* Light background color */
-    color: #333; /* Text color */
-    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-}
-
-/* Style for the arrow down icon inside the select element */
-#laneSelect {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23333" d="M7 10l5 5 5-5z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 10px top 50%; /* Position the arrow icon */
-    background-size: 12px; /* Size of the arrow icon */
-}
-
-/* Style the select:hover to change when the user hovers over it */
-#laneSelect:hover {
-    border-color: #888; /* Darker border color on hover */
-}
-
-/* Style the select:focus to change when the select is focused */
-#laneSelect:focus {
-    border-color: #555; /* Even darker border color on focus */
-    outline: none; /* Remove the default focus outline */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    display: inline-block;
 }
