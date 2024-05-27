@@ -41,7 +41,7 @@ h1, h2 {
     position: relative;
 }
 
-#championName1, #championName2, #championName3 {
+#championName1, #championName2, #championName3, #championName4, #championName5 {
     font-size: 24px;
     font-weight: bold;
     color: white;
@@ -86,7 +86,7 @@ h1, h2 {
     margin-right: 5px;
 }
 
-#championLane1, #championLane2, #championLane3 {
+#championLane1, #championLane2, #championLane3, #championLane4, #championLane5 {
     font-size: 20px;
     font-weight: bold;
     color: white;
