@@ -27,13 +27,13 @@ async function getRandomChampions() {
         champions = filteredChampions;
     }
 
-    if (champions.length < 3) {
+    if (champions.length < 5) {
         alert("Not enough champions found for the selected lanes.");
         return;
     }
 
     const randomChampions = [];
-    while (randomChampions.length < 3) {
+    while (randomChampions.length < 5) {
         const randomChampion = champions[Math.floor(Math.random() * champions.length)];
         if (!randomChampions.find(champ => champ.id === randomChampion.id)) {
             randomChampions.push(randomChampion);
