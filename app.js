@@ -27,16 +27,29 @@ async function getRandomChampions() {
         champions = filteredChampions;
     }
 
-    if (champions.length < 5) {
+    if (champions.length < 2) {
         alert("Not enough champions found for the selected lanes.");
         return;
     }
 
     const randomChampions = [];
-    while (randomChampions.length < 5) {
-        const randomChampion = champions[Math.floor(Math.random() * champions.length)];
-        if (!randomChampions.find(champ => champ.id === randomChampion.id)) {
-            randomChampions.push(randomChampion);
+    const usedLanes = new Set();
+
+    if (selectedLanes.length === 1) {
+        const laneChampions = champions.filter(champion => selectedLanes.includes(champion.lane));
+        while (randomChampions.length < 2) {
+            const randomChampion = laneChampions[Math.floor(Math.random() * laneChampions.length)];
+            if (!randomChampions.find(champ => champ.id === randomChampion.id)) {
+                randomChampions.push(randomChampion);
+            }
+        }
+    } else {
+        while (randomChampions.length < 2) {
+            const randomChampion = champions[Math.floor(Math.random() * champions.length)];
+            if (!randomChampions.find(champ => champ.id === randomChampion.id) && !usedLanes.has(randomChampion.lane)) {
+                randomChampions.push(randomChampion);
+                usedLanes.add(randomChampion.lane);
+            }
         }
     }
 
@@ -44,10 +57,21 @@ async function getRandomChampions() {
         document.getElementById(`championName${index + 1}`).textContent = champion.name;
         document.getElementById(`championImage${index + 1}`).src = `https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`;
         document.getElementById(`championLane${index + 1}`).textContent = `Lane: ${champion.lane}`;
+        document.getElementById(`championStats${index + 1}`).innerHTML = `
+            <p>HP: ${champion.stats.hp}</p>
+            <p>Attack Damage: ${champion.stats.attackdamage}</p>
+            <p>Armor: ${champion.stats.armor}</p>
+            <p>Attack Speed: ${champion.stats.attackspeed}</p>
+        `;
         if (index === 0) {
-            document.body.style.backgroundImage = `url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg')`;
+            // document.body.style.backgroundImage = `url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg')`;
+            const backgroundOverlay = document.createElement('div');
+            backgroundOverlay.className = 'background-overlay';
+            document.body.appendChild(backgroundOverlay);
         }
     });
 
-    document.querySelectorAll('.championContainer').forEach(container => container.style.display = 'block');
+    document.querySelectorAll('.championContainer').forEach((container, index) => {
+        container.style.display = index < 2 ? 'block' : 'none';
+    });
 }

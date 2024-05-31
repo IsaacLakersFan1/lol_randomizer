@@ -1,8 +1,9 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #2c2c2c; /* Default grey background for initial state */
-    background: url('path/to/resized_new_image.png') no-repeat center center fixed;
-    background-size: cover;
+    /* background: url('/mnt/data/image.png') ; */
+    background-size: contain;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     padding: 20px;
@@ -35,27 +36,24 @@ h1, h2 {
     background-color: #0056b3;
 }
 
-.championContainer {
-    display: none;
+.champion-row {
+    display: flex;
+    justify-content: space-around;
     margin-top: 20px;
-    position: relative;
 }
 
-#championName1, #championName2, #championName3, #championName4, #championName5 {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    margin: 10px 0;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    border-radius: 10px;
-    display: inline-block;
+.championContainer {
+    display: none;
+    /* margin: 10px;
+    padding: 10px; */
+    text-align: left;
+    vertical-align: top;
+    width: 45%;
 }
 
 .championImage {
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    max-width: 200px;
+    max-width: 100%;
 }
 
 .title {
@@ -74,25 +72,56 @@ h1, h2 {
     margin: 20px auto;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 #laneSelection label {
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
 }
 
 #laneSelection input[type="checkbox"] {
-    margin-right: 5px;
+    margin-right: 10px;
+    transform: scale(1.5);
 }
 
-#championLane1, #championLane2, #championLane3, #championLane4, #championLane5 {
-    font-size: 20px;
+#championName1, #championName2 {
+    font-size: 24px;
     font-weight: bold;
     color: white;
     margin: 10px 0;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    border-radius: 10px;
     display: inline-block;
+}
+
+#championLane1, #championLane2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    /* margin: 10px 0;
+    padding: 10px; */
+    display: inline-block;
+}
+
+.championStats {
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
+}
+
+
+.championDetails {
+    display: flex;
+    align-items: center;
+}
+
+.championImage {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+.championStats {
+    flex: 1;
+    margin-left: 10px;
+    background: transparent; /* Make background transparent */
 }
